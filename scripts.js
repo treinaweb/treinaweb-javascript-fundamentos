@@ -1,19 +1,17 @@
-let palavra = 'carro',
-    letra = 'r',
-    total = 0,
-    totalAProcurar = 2,
-    indice = 0;
+let numeroEscolhido = Math.floor((Math.random() * 9) + 1),
+    acertou = false,
+    palpite = '';
 
-while(total < totalAProcurar && indice < palavra.length){
-    if(palavra[indice] === letra){
-        total++;
+
+do{
+    palpite = prompt('Qual o seu número?', 0);
+    if(parseInt(palpite) === numeroEscolhido){
+        acertou = true;
     }
+}while(palpite !== '' && parseInt(palpite) !== numeroEscolhido);
 
-    indice++;
-}
-
-if(total >= totalAProcurar){
-    console.log('SIM');
+if(acertou){
+    console.log('Vitória');
 }else{
-    console.log('NÃO');
+    console.log('Não foi dessa vez');
 }
