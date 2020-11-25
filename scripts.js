@@ -1,17 +1,8 @@
-let numeroEscolhido = Math.floor((Math.random() * 9) + 1),
-    acertou = false,
-    palpite = '';
 
-
-do{
-    palpite = prompt('Qual o seu número?', 0);
-    if(parseInt(palpite) === numeroEscolhido){
-        acertou = true;
+function tabuada(numero = 0, limite = 10){
+    for(var j = 1; j <= limite; j++){
+        console.log(`${numero} x ${j} = ${numero*j}`);
     }
-}while(palpite !== '' && parseInt(palpite) !== numeroEscolhido);
-
-if(acertou){
-    console.log('Vitória');
-}else{
-    console.log('Não foi dessa vez');
 }
+
+tabuada(6, 3);
