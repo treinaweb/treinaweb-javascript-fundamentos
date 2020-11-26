@@ -1,8 +1,12 @@
+let precos = [2, 1, 5, 3, 8, 4];
 
-function tabuada(numero = 0, limite = 10){
-    for(var j = 1; j <= limite; j++){
-        console.log(`${numero} x ${j} = ${numero*j}`);
+function soma(...numeros){
+    let total = 0;
+    for(let i = 0; i < numeros.length; i++){
+        total += numeros[i];
     }
+    return total;
 }
 
-tabuada(6, 3);
+console.log(soma(...precos));
+
